@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ziyad Hyder • Full-Stack Developer</title>
+<meta name="description" content="Ziyad Hyder - B.Tech CSE, KITSW. Full-stack developer: ManaVoter, KITS One, Vertex Analytics.">
+<link rel="canonical" href="https://ziyadhyder.dev/">
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23F0EEE6'/%3E%3Crect x='3' y='3' width='58' height='58' fill='none' stroke='%23A63A2E' stroke-width='2.5'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-weight='700' font-size='30' fill='%231C2A2C' text-anchor='middle'%3EZH%3C/text%3E%3C/svg%3E">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ziyadhyder.dev/">
+<meta property="og:title" content="Ziyad Hyder — Full-Stack Developer">
+<meta property="og:description" content="ManaVoter, KITS One, Vertex Analytics — search, ingestion, and performance at scale.">
+<meta property="og:image" content="https://ziyadhyder.dev/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Ziyad Hyder — Full-Stack Developer">
+<meta name="twitter:description" content="ManaVoter, KITS One, Vertex Analytics — search, ingestion, and performance at scale.">
+<meta name="twitter:image" content="https://ziyadhyder.dev/og-image.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --paper:      #F0EEE6;
+    --paper-raised:#E7E2D3;
+    --ink:        #1C2A2C;
+    --ink-soft:   #55625F;
+    --rule:       #C7C0AC;
+    --primary:    #2B4C6F;
+    --accent:     #A63A2E;
+    --display: 'Source Serif 4', Georgia, serif;
+    --body:    'IBM Plex Sans', -apple-system, sans-serif;
+    --mono:    'IBM Plex Mono', 'SFMono-Regular', monospace;
+    --max: 760px;
+  }
+
+  *{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--body);
+    font-size:16px;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{ color:var(--primary); text-decoration:none; border-bottom:1px solid currentColor; }
+  a:hover{ color:var(--accent); }
+  a:focus-visible, button:focus-visible{ outline:2px solid var(--accent); outline-offset:3px; }
+
+  .wrap{ max-width:var(--max); margin:0 auto; padding:0 24px; }
+
+  .eyebrow{
+    font-family:var(--mono);
+    font-size:12px;
+    letter-spacing:.09em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+  }
+
+  header.hero{ padding:64px 0 40px; }
+  header.hero .eyebrow{ margin-bottom:14px; }
+  section.about{ padding:32px 0; }
+  section.about .eyebrow{ margin-bottom:14px; }
+  .about-text{ max-width:62ch; margin:0 0 12px; color:var(--ink); }
+  .about-text:last-child{ margin-bottom:0; }
+  h1{
+    font-family:var(--display);
+    font-weight:600;
+    font-size:clamp(32px, 5.5vw, 46px);
+    line-height:1.08;
+    margin:0 0 12px;
+    letter-spacing:-.01em;
+  }
+  .tagline{
+    font-size:18px;
+    color:var(--ink-soft);
+    max-width:52ch;
+    margin:0 0 22px;
+  }
+  .social-row{ display:flex; gap:18px; flex-wrap:wrap; font-family:var(--mono); font-size:13px; }
+  .social-row a{ border-bottom:1px solid var(--rule); }
+
+  .rule{ border:none; border-top:1px solid var(--rule); margin:0; }
+
+  /* index / table of contents */
+  nav.index{ padding:36px 0; }
+  nav.index .eyebrow{ margin-bottom:16px; }
+  .index-list{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; }
+  .index-list li{ border-top:1px solid var(--rule); }
+  .index-list li:last-child{ border-bottom:1px solid var(--rule); }
+  .index-list a{
+    display:flex;
+    align-items:baseline;
+    gap:14px;
+    padding:13px 0;
+    border-bottom:none;
+    color:var(--ink);
+  }
+  .index-list a:hover{ color:var(--accent); }
+  .index-num{ font-family:var(--mono); font-size:13px; color:var(--accent); flex-shrink:0; width:22px; }
+  .index-name{ font-family:var(--display); font-size:18px; font-weight:600; flex-shrink:0; }
+  .index-dots{ flex:1; border-bottom:1px dotted var(--rule); margin-bottom:5px; }
+  .index-meta{ font-family:var(--mono); font-size:12px; color:var(--ink-soft); flex-shrink:0; text-align:right; }
+
+  /* project files */
+  section.files{ padding:8px 0 24px; }
+  .file{ padding:44px 0; border-top:1px solid var(--rule); }
+  .file:last-child{ border-bottom:1px solid var(--rule); }
+  .file-head{ display:flex; justify-content:space-between; align-items:flex-start; gap:16px; margin-bottom:6px; flex-wrap:wrap; }
+  .file-num{ font-family:var(--mono); font-size:12px; color:var(--accent); letter-spacing:.06em; }
+  .status{
+    font-family:var(--mono); font-size:11px; letter-spacing:.08em;
+    border:1px solid var(--ink); color:var(--ink);
+    padding:2px 8px; border-radius:2px; text-transform:uppercase; white-space:nowrap;
+  }
+  .status.live{ border-color:var(--primary); color:var(--primary); }
+  .file h2{
+    font-family:var(--display); font-weight:600; font-size:26px; margin:2px 0 4px; letter-spacing:-.005em;
+  }
+  .file .stackline{ font-family:var(--mono); font-size:12.5px; color:var(--ink-soft); margin:0 0 14px; }
+  .file p.desc{ margin:0 0 18px; max-width:62ch; }
+  .file ul.points{ margin:0 0 18px; padding-left:18px; max-width:62ch; }
+  .file ul.points li{ margin-bottom:6px; }
+
+  .stat-plate{
+    display:flex; flex-wrap:wrap; gap:0;
+    border:1px solid var(--rule);
+    background:var(--paper-raised);
+    margin:0 0 18px;
+  }
+  .stat{
+    padding:12px 18px;
+    border-right:1px solid var(--rule);
+    flex:1 1 auto;
+    min-width:120px;
+  }
+  .stat:last-child{ border-right:none; }
+  .stat-val{ font-family:var(--mono); font-size:16px; font-weight:500; color:var(--ink); }
+  .stat-label{ font-family:var(--mono); font-size:10.5px; text-transform:uppercase; letter-spacing:.06em; color:var(--ink-soft); margin-top:2px; }
+
+  .file-links{ display:flex; gap:20px; font-family:var(--mono); font-size:13px; }
+
+  /* skills */
+  section.skills{ padding:40px 0; }
+  .skill-grid{ display:grid; grid-template-columns:1fr 1fr; gap:22px 32px; margin-top:18px; }
+  .skill-cat{ font-family:var(--mono); font-size:11px; text-transform:uppercase; letter-spacing:.07em; color:var(--accent); margin-bottom:6px; }
+  .skill-items{ font-size:14.5px; color:var(--ink-soft); line-height:1.6; }
+  section.skills .eyebrow{
+  font-family:var(--display);
+  font-size:16px;
+  font-weight:600;
+  text-transform:none;
+  letter-spacing:normal;
+  color:var(--ink);
+  margin:0 0 12px;
+}
+
+  /* certifications + leadership */
+  section.side{ padding:40px 0; }
+  .side-grid{ display:grid; grid-template-columns:1fr 1fr; gap:36px; margin-top:18px; }
+  @media (max-width:600px){ .side-grid{ grid-template-columns:1fr; } .skill-grid{ grid-template-columns:1fr; } }
+  .side h3{ font-family:var(--display); font-size:16px; margin:0 0 12px; }
+  .side ul{ list-style:none; margin:0; padding:0; }
+  .side li{ padding:8px 0; border-top:1px solid var(--rule); font-size:14px; }
+  .side li:last-child{ border-bottom:1px solid var(--rule); }
+  .side .role{ color:var(--ink); }
+  .side .org{ color:var(--ink-soft); font-size:12.5px; }
+
+  footer{ padding:48px 0 64px; }
+  footer .foot-grid{ display:flex; justify-content:space-between; flex-wrap:wrap; gap:20px; font-family:var(--mono); font-size:12.5px; color:var(--ink-soft); }
+  footer .foot-grid a{ color:var(--ink-soft); border-bottom:1px solid var(--rule); }
+
+  ::selection{ background:var(--accent); color:var(--paper); }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header class="hero">
+    <h1>Ziyad Hyder</h1>
+    <p class="tagline">Full-stack developer. I work on search, ingestion, and performance at scale; systems that stay fast as the record count grows.</p>
+    <div class="social-row">
+      <a href="mailto:ziyadhyder01@gmail.com" target="_blank" rel="noopener noreferrer">Email</a>
+      <a href="https://github.com/ziyad-hyder" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://linkedin.com/in/ziyadhyder" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="resume.pdf" target="_blank" rel="noopener noreferrer">Resume (PDF)</a>
+    </div>
+  </header>
+
+  <hr class="rule">
+
+  <section class="about">
+    <div class="eyebrow">About</div>
+    <p class="about-text">I build software that solves real problems, taking projects from idea to deployment.</p>
+    <p class="about-text">I primarily work with Java (Spring Boot, JPA), React, SQL, and cloud infrastructure. I enjoy working on backend systems, data ingestion, and performance optimization.</p>
+    <p class="about-text">Alongside software projects, I'm part of KITSW's Honors &amp; Research Program, where I work on research-oriented projects in cloud computing and performance optimization.</p>
+  </section>
+
+  <hr class="rule">
+
+  <nav class="index" aria-label="Project index">
+    <div class="eyebrow">Index</div>
+    <ul class="index-list">
+      <li><a href="#manavoter"><span class="index-num">01</span><span class="index-name">ManaVoter</span><span class="index-dots"></span><span class="index-meta">1.23cr records · &lt;100ms</span></a></li>
+      <li><a href="#kits-one"><span class="index-num">02</span><span class="index-name">KITS One</span><span class="index-dots"></span><span class="index-meta">500+ users</span></a></li>
+      <li><a href="#vertex"><span class="index-num">03</span><span class="index-name">Vertex Analytics</span><span class="index-dots"></span><span class="index-meta">self-hosted</span></a></li>
+      <li><a href="#honors"><span class="index-num">04</span><span class="index-name">VM Placement Replication</span><span class="index-dots"></span><span class="index-meta">honors research</span></a></li>
+    </ul>
+  </nav>
+
+  <section class="files">
+
+    <article class="file" id="manavoter">
+      <div class="file-head">
+        <span class="file-num">FILE 01 / MANAVOTER</span>
+        <span class="status live">Live</span>
+      </div>
+      <h2>Telangana Electoral Roll Search Engine</h2>
+      <p class="stackline">Java 21 · Spring Boot · React / TypeScript · Oracle ATP 19c · Railway</p>
+      <p class="desc">A search engine over 1.23 crore voter records across 6 districts, built to fix a real problem: the Election Commission's PDFs use corrupted Type3 font encoding that breaks Telugu text search entirely.</p>
+      <ul class="points">
+        <li>Built a data ingestion pipeline with Tabula-java and Apache PDFBox to extract, normalize, and load records at scale from multi-format ECI PDFs.</li>
+        <li>Designed a Telugu consonant-skeleton normalization algorithm that strips diacritics to canonical forms, enabling fuzzy search across variant spellings — the actual fix for the encoding corruption.</li>
+        <li>Built a thread-safe immutable in-memory index via Spring Boot <code>@PostConstruct</code> for concurrent reads with no synchronization overhead.</li>
+      </ul>
+      <div class="stat-plate">
+        <div class="stat"><div class="stat-val">1.23 CRORE</div><div class="stat-label">Records indexed</div></div>
+        <div class="stat"><div class="stat-val">&lt;100 MS</div><div class="stat-label">Query latency</div></div>
+        <div class="stat"><div class="stat-val">300+</div><div class="stat-label">Users, zero marketing</div></div>
+      </div>
+      <div class="file-links">
+        <a href="https://manavoter.in" target="_blank" rel="noopener noreferrer">Site →</a>
+        <a href="https://github.com/ziyad-hyder/namma-voter" target="_blank" rel="noopener noreferrer">Code →</a>
+      </div>
+    </article>
+
+    <article class="file" id="kits-one">
+      <div class="file-head">
+        <span class="file-num">FILE 02 / KITS ONE</span>
+        <span class="status live">Live</span>
+      </div>
+      <h2>Student Academic Companion</h2>
+      <p class="stackline">HTML5 · JavaScript (ES6+) · Tailwind CSS</p>
+      <p class="desc">A CGPA and attendance calculator built for KITSW's URR-24 regulations, after watching classmates get the math wrong every semester because no existing tool handled branch-specific credit rules correctly.</p>
+      <ul class="points">
+        <li>Custom computation engine implementing URR-24 rules exactly; branch-specific credits and grade exclusions no other tool on campus supported.</li>
+        <li>Zero backend, zero hosting cost, adoption spread entirely by word-of-mouth within the college.</li>
+      </ul>
+      <div class="stat-plate">
+        <div class="stat"><div class="stat-val">500+</div><div class="stat-label">Active users</div></div>
+        <div class="stat"><div class="stat-val">9000+</div><div class="stat-label">Tracked events</div></div>
+        <div class="stat"><div class="stat-val">$0</div><div class="stat-label">Hosting cost</div></div>
+      </div>
+      <div class="file-links">
+        <a href="https://ziyad-hyder.github.io/kits-one/" target="_blank" rel="noopener noreferrer">Live demo →</a>
+        <a href="https://github.com/ziyad-hyder/kits-one" target="_blank" rel="noopener noreferrer">Code →</a>
+      </div>
+    </article>
+
+    <article class="file" id="vertex">
+      <div class="file-head">
+        <span class="file-num">FILE 03 / VERTEX ANALYTICS</span>
+        <span class="status">Self-hosted</span>
+      </div>
+      <h2>Developer Analytics Platform</h2>
+      <p class="stackline">Java 21 · Spring Boot 3.5 · Spring JDBC · Oracle XE · Maven</p>
+      <p class="desc">A self-hostable alternative to third-party analytics - for teams that want pageview, session, and device data without shipping it to someone else's servers.</p>
+      <ul class="points">
+        <li>Multi-tenant REST API with a normalized schema (<code>PROJECTS → EVENTS</code>) exposing aggregation endpoints for pageviews, heatmaps, sessions, and device stats.</li>
+        <li>Sub-2KB embed script using <code>sendBeacon</code> for async, non-blocking telemetry with silent-fail semantics - the tracker never disrupts the host page's load.</li>
+        <li>Dashboard auto-refreshes every 10 seconds via live aggregation queries.</li>
+      </ul>
+      <div class="file-links">
+        <a href="https://github.com/ziyad-hyder/vertex" target="_blank" rel="noopener noreferrer">Code →</a>
+      </div>
+    </article>
+
+    <article class="file" id="honors">
+      <div class="file-head">
+        <span class="file-num">FILE 04 / HONORS RESEARCH</span>
+        <span class="status">Replication</span>
+      </div>
+      <h2>Dynamic VM Placement - Base Paper Replication</h2>
+      <p class="stackline">Java 21 · CloudSim 7.0.1</p>
+      <p class="desc">First assignment under KITSW's Honors &amp; Research program: an exact replication of Mosa &amp; Sakellariou's genetic-algorithm-based dynamic VM placement solution (IEEE CLOUD 2019), which balances CPU <em>and</em> memory when reallocating VMs across physical machines, rather than the CPU-only heuristics most placement solutions default to.</p>
+      <ul class="points">
+        <li>Reimplemented the GA-based placement engine and the best-fit-decreasing baseline from the paper's description, migrating across CloudSim's 3.x → 7.0.1 API changes.</li>
+        <li>Evaluated across five datacenter scale configurations (200/100 up to 4000/2000 VMs/PMs) under both normal and memory-skewed workloads, reporting the paper's own AOUU % and AOSLAV % metrics.</li>
+        <li>Found and fixed a state-persistence bug in the workload generator, and tuned the GA's population/generation parameters to cut a multi-hour run down to under 30 seconds.</li>
+        <li>Where the base paper left a parameter unstated (host RAM capacity), explicitly flagged the assumption used rather than silently filling the gap.</li>
+      </ul>
+      <div class="stat-plate">
+        <div class="stat"><div class="stat-val">45.4% vs 74.4%</div><div class="stat-label">GA vs BFD under-util. (200/100)</div></div>
+        <div class="stat"><div class="stat-val">5 × 2</div><div class="stat-label">Scale configs × workload profiles</div></div>
+        <div class="stat"><div class="stat-val">&lt;30S</div><div class="stat-label">Runtime, down from hours</div></div>
+      </div>
+      <div class="file-links">
+        <a href="https://github.com/ziyad-hyder/cloudsim-vm-placement-replication" target="_blank" rel="noopener noreferrer">Code →</a>
+      </div>
+    </article>
+
+  </section>
+
+  <hr class="rule">
+
+  <section class="skills">
+    <div class="eyebrow">Stack</div>
+    <div class="skill-grid">
+      <div>
+        <div class="skill-cat">Languages</div>
+        <div class="skill-items">Java 21, Python, C, Oracle SQL, JavaScript (ES6+), TypeScript</div>
+      </div>
+      <div>
+        <div class="skill-cat">Backend</div>
+        <div class="skill-items">Spring Boot 3.x, Spring Data JPA, Spring JDBC, Hibernate, Maven, REST APIs</div>
+      </div>
+      <div>
+        <div class="skill-cat">Frontend</div>
+        <div class="skill-items">React, TypeScript, Vite, Tailwind CSS, HTML5, CSS3</div>
+      </div>
+      <div>
+        <div class="skill-cat">Databases &amp; Infra</div>
+        <div class="skill-items">Oracle ATP (19c), Oracle XE, PostgreSQL, Oracle Cloud (OCI), Git, Linux</div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <section class="side">
+    <div class="side-grid">
+      <div>
+        <h3>Certifications</h3>
+        <ul>
+          <li><a class="role" href="https://catalog-education.oracle.com/pls/certview/sharebadge?id=B93E194D08ACFF04824255B40A08B19732BDD791FDBF1AA7BE9614CD4B1C4DEA">OCI Foundations Associate</a><div class="org">Oracle, 2025</div></li>
+          <li><a class="role" href="https://catalog-education.oracle.com/pls/certview/sharebadge?id=9013B6E7C2C51FE5A8A3A0A2F24194FDD11AA90D572B6061068B2A4B4F91B365">OCI AI Foundations Associate</a><div class="org">Oracle, 2025</div></li>
+          <li><a class="role" href="https://catalog-education.oracle.com/pls/certview/sharebadge?id=EEC451AF3EF8E59DB6E0137BBF529061CEFCE79A92324AC8614578ACD92A4880">OCI Data Platform Foundations Associate</a><div class="org">Oracle, 2025</div></li>
+          <li><a class="role" href="https://cs50.harvard.edu/certificates/7364e257-791f-42cd-b84c-6f000cb780d5">CS50x — Intro to Computer Science</a><div class="org">Harvard University, 2025</div></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Leadership &amp; Activities</h3>
+        <ul>
+          <li><span class="role">Executive Member, CSE Association</span><div class="org">KITSW · 2025–Present · Coordinated workshops for 300+ students</div></li>
+          <li><span class="role">Executive Member, Literary Club</span><div class="org">KITSW · 2025–Present</div></li>
+          <li><span class="role">2nd Prize, KITS Model United Nations</span><div class="org">Represented Saudi Arabia · top 3 of 100 delegates</div></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <hr class="rule" style="margin-bottom:24px;">
+    <div class="foot-grid">
+      <div>Warangal, India</div>
+      <div>English (Professional) · Hindi (Native) · Telugu (Bilingual)</div>
+      <div><a href="mailto:ziyadhyder01@gmail.com">ziyadhyder01@gmail.com</a></div>
+    </div>
+  </footer>
+
+</div>
+
+</body>
+</html>
