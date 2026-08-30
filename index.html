@@ -3,22 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ziyad Hyder • Full-Stack Developer</title>
-<meta name="description" content="Ziyad Hyder - B.Tech CSE, KITSW. Full-stack developer: ManaVoter, KITS One, Vertex Analytics.">
+<title>Ziyad Hyder • Backend Developer</title>
+<meta name="description" content="Ziyad Hyder - B.Tech CSE, KITSW. Backend developer: ManaVoter, KITS One, Vertex Analytics.">
 <link rel="canonical" href="https://ziyadhyder.dev/">
 
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23F0EEE6'/%3E%3Crect x='3' y='3' width='58' height='58' fill='none' stroke='%23A63A2E' stroke-width='2.5'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-weight='700' font-size='30' fill='%231C2A2C' text-anchor='middle'%3EZH%3C/text%3E%3C/svg%3E">
 
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://ziyadhyder.dev/">
-<meta property="og:title" content="Ziyad Hyder — Full-Stack Developer">
-<meta property="og:description" content="ManaVoter, KITS One, Vertex Analytics — search, ingestion, and performance at scale.">
+<meta property="og:title" content="Ziyad Hyder - Backend Developer">
+<meta property="og:description" content="ManaVoter, KITS One, Vertex Analytics - search, ingestion, and performance at scale.">
 <meta property="og:image" content="https://ziyadhyder.dev/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Ziyad Hyder — Full-Stack Developer">
-<meta name="twitter:description" content="ManaVoter, KITS One, Vertex Analytics — search, ingestion, and performance at scale.">
+<meta name="twitter:title" content="Ziyad Hyder - Backend Developer">
+<meta name="twitter:description" content="ManaVoter, KITS One, Vertex Analytics - search, ingestion, and performance at scale.">
 <meta name="twitter:image" content="https://ziyadhyder.dev/og-image.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -187,7 +187,7 @@
 
   <header class="hero">
     <h1>Ziyad Hyder</h1>
-    <p class="tagline">Full-stack developer. I work on search, ingestion, and performance at scale; systems that stay fast as the record count grows.</p>
+    <p class="tagline">Backend developer. I like building things that handle real data and real load.</p>
     <div class="social-row">
       <a href="mailto:ziyadhyder01@gmail.com" target="_blank" rel="noopener noreferrer">Email</a>
       <a href="https://github.com/ziyad-hyder" target="_blank" rel="noopener noreferrer">GitHub</a>
@@ -207,13 +207,30 @@
 
   <hr class="rule">
 
+  <section class="about" id="education">
+    <div class="eyebrow">Education</div>
+    <p class="about-text"><strong>B.Tech, Computer Science &amp; Engineering</strong> - Kakatiya Institute of Technology &amp; Science (KITSW), Warangal</p>
+    <p class="about-text">2024 - 2028 · CGPA 8.59</p>
+  </section>
+
+  <hr class="rule">
+
   <nav class="index" aria-label="Project index">
     <div class="eyebrow">Index</div>
     <ul class="index-list">
       <li><a href="#manavoter"><span class="index-num">01</span><span class="index-name">ManaVoter</span><span class="index-dots"></span><span class="index-meta">1.23cr records · &lt;100ms</span></a></li>
       <li><a href="#kits-one"><span class="index-num">02</span><span class="index-name">KITS One</span><span class="index-dots"></span><span class="index-meta">500+ users</span></a></li>
-      <li><a href="#vertex"><span class="index-num">03</span><span class="index-name">Vertex Analytics</span><span class="index-dots"></span><span class="index-meta">self-hosted</span></a></li>
-      <li><a href="#honors"><span class="index-num">04</span><span class="index-name">VM Placement Replication</span><span class="index-dots"></span><span class="index-meta">honors research</span></a></li>
+      <li><a href="#unix"><span class="index-num">03</span><span class="index-name">UniX</span><span class="index-dots"></span><span class="index-meta">campus marketplace</span></a></li>
+      <li><a href="#vertex"><span class="index-num">04</span><span class="index-name">Vertex Analytics</span><span class="index-dots"></span><span class="index-meta">self-hosted</span></a></li>
+    </ul>
+  </nav>
+
+  <hr class="rule">
+
+  <nav class="index" aria-label="Research index">
+    <div class="eyebrow">Research</div>
+    <ul class="index-list">
+      <li><a href="#honors"><span class="index-num">01</span><span class="index-name">VM Placement Replication</span><span class="index-dots"></span><span class="index-meta">honors research</span></a></li>
     </ul>
   </nav>
 
@@ -229,7 +246,7 @@
       <p class="desc">A search engine over 1.23 crore voter records across 6 districts, built to fix a real problem: the Election Commission's PDFs use corrupted Type3 font encoding that breaks Telugu text search entirely.</p>
       <ul class="points">
         <li>Built a data ingestion pipeline with Tabula-java and Apache PDFBox to extract, normalize, and load records at scale from multi-format ECI PDFs.</li>
-        <li>Designed a Telugu consonant-skeleton normalization algorithm that strips diacritics to canonical forms, enabling fuzzy search across variant spellings — the actual fix for the encoding corruption.</li>
+        <li>Designed a Telugu consonant-skeleton normalization algorithm that strips diacritics to canonical forms, enabling fuzzy search across variant spellings, the actual fix for the encoding corruption.</li>
         <li>Built a thread-safe immutable in-memory index via Spring Boot <code>@PostConstruct</code> for concurrent reads with no synchronization overhead.</li>
       </ul>
       <div class="stat-plate">
@@ -266,9 +283,33 @@
       </div>
     </article>
 
+    <article class="file" id="unix">
+      <div class="file-head">
+        <span class="file-num">FILE 03 / UNIX</span>
+        <span class="status live">Live</span>
+      </div>
+      <h2>Verified Campus Resource-Sharing Marketplace</h2>
+      <p class="stackline">React 18 / Vite · Spring Boot 3.3 (Java 21) · Oracle ATP 19c · Cloudflare Pages / R2 · OCI VM</p>
+      <p class="desc">A marketplace restricted to verified <code>@kitsw.ac.in</code> accounts, letting students buy, sell, rent, and swap calculators, drafting kits, and lab equipment instead of every cohort buying it new for one or two semesters' use.</p>
+      <ul class="points">
+        <li>Dual-scheme auth (HttpOnly cookies plus an <code>Authorization: Bearer</code> fallback) built specifically to work around iOS Safari's ITP silently blocking cross-site cookies between the Cloudflare Pages frontend and the OCI backend.</li>
+        <li>Fit Spring Boot + Hibernate + JPA into a 1GB OCI VM with tuned JVM flags (<code>-Xmx256m -XX:MaxMetaspaceSize=128m -XX:+UseSerialGC</code>); an initial 80m metaspace cap crashed the JVM on boot since class loading at startup needs more headroom than steady-state idle does.</li>
+        <li>Listing image uploads via Cloudflare R2 with client-side canvas compression, and WhatsApp contact reveal gated on accepted transactions.</li>
+      </ul>
+      <div class="stat-plate">
+        <div class="stat"><div class="stat-val">1 GB</div><div class="stat-label">Backend VM footprint</div></div>
+        <div class="stat"><div class="stat-val">$0</div><div class="stat-label">Hosting cost</div></div>
+        <div class="stat"><div class="stat-val">@KITSW.AC.IN</div><div class="stat-label">Verified accounts only</div></div>
+      </div>
+      <div class="file-links">
+        <a href="https://unix-9o9.pages.dev" target="_blank" rel="noopener noreferrer">Site →</a>
+        <a href="https://github.com/ziyad-hyder/unix" target="_blank" rel="noopener noreferrer">Code →</a>
+      </div>
+    </article>
+
     <article class="file" id="vertex">
       <div class="file-head">
-        <span class="file-num">FILE 03 / VERTEX ANALYTICS</span>
+        <span class="file-num">FILE 04 / VERTEX ANALYTICS</span>
         <span class="status">Self-hosted</span>
       </div>
       <h2>Developer Analytics Platform</h2>
@@ -284,9 +325,15 @@
       </div>
     </article>
 
+  </section>
+
+  <hr class="rule">
+
+  <section class="files">
+
     <article class="file" id="honors">
       <div class="file-head">
-        <span class="file-num">FILE 04 / HONORS RESEARCH</span>
+        <span class="file-num">RESEARCH 01 / HONORS RESEARCH</span>
         <span class="status">Replication</span>
       </div>
       <h2>Dynamic VM Placement - Base Paper Replication</h2>
@@ -344,7 +391,7 @@
           <li><a class="role" href="https://catalog-education.oracle.com/pls/certview/sharebadge?id=B93E194D08ACFF04824255B40A08B19732BDD791FDBF1AA7BE9614CD4B1C4DEA">OCI Foundations Associate</a><div class="org">Oracle, 2025</div></li>
           <li><a class="role" href="https://catalog-education.oracle.com/pls/certview/sharebadge?id=9013B6E7C2C51FE5A8A3A0A2F24194FDD11AA90D572B6061068B2A4B4F91B365">OCI AI Foundations Associate</a><div class="org">Oracle, 2025</div></li>
           <li><a class="role" href="https://catalog-education.oracle.com/pls/certview/sharebadge?id=EEC451AF3EF8E59DB6E0137BBF529061CEFCE79A92324AC8614578ACD92A4880">OCI Data Platform Foundations Associate</a><div class="org">Oracle, 2025</div></li>
-          <li><a class="role" href="https://cs50.harvard.edu/certificates/7364e257-791f-42cd-b84c-6f000cb780d5">CS50x — Intro to Computer Science</a><div class="org">Harvard University, 2025</div></li>
+          <li><a class="role" href="https://cs50.harvard.edu/certificates/7364e257-791f-42cd-b84c-6f000cb780d5">CS50x - Intro to Computer Science</a><div class="org">Harvard University, 2025</div></li>
         </ul>
       </div>
       <div>
